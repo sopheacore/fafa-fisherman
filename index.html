@@ -3,43 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAFA138</title>
-    <link rel="icon" href="./assets/diamond.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css">
+    <title>168$ Winner</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="Fishing%20Slot/Asset/favicon.ico" type="image/x-icon" />
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
- 
+
+    <!-- Wheel Section -->
     <div class="wheel-container">
-        <img src="./assets/title.png" alt="Game Title" class="title-img">
-        <img class="wheel-frame" src="./assets/WHEEL/border.png" alt="frame">
+        <img class="wheel-frame" src="Fishing%20Slot/Asset/Wheel.png" alt="Game Wheel Frame">
+        
         <div class="pointer">
-            <img src="./assets/WHEEL/pointer.png" alt="pointer">
+            <img src="Fishing%20Slot/Asset/pointer.png" alt="Pointer">
         </div>
+        
         <div class="wheel" id="wheel">
-            <img src="./assets/WHEEL/spin-wheel.png" alt="wheel">
+            <img src="Fishing%20Slot/Asset/In_wheel.png" alt="Game Wheel">
         </div>
-        <img src="./assets/spin-bt.png" class="spin-button" onclick="spinWheel()" alt="Spin Button">
+        
+        <!-- Spin Button -->
+        <img 
+            src="Fishing%20Slot/CTA/spin_button.gif" 
+            class="spin-button" 
+            onclick="spinWheel()" 
+            alt="Spin the Wheel">
     </div>
 
+    <!-- Win Modal -->
     <div class="modal" id="winModal">
         <div class="modal-content">
-            <img src="./assets/MESSAGE/msg-10.png" alt="Winning Message"> 
-            <a href="https://t.me/fafa138cvs_bot?start=138FbadSpinWheel" target="_blank" class="trackable-link">
-                <img src="./assets/CTA/claim-reward.gif" alt="Claim Reward">
+            <img src="Fishing%20Slot/Asset/10%24.png" alt="You Won 10 Dollars">
+            
+            <a href="https://t.me/fafa138cvs_bot?start=138FishSpin" 
+               class="trackable-link" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                <img src="Fishing%20Slot/CTA/congratulations.gif" alt="Congratulations Button">
             </a>
         </div>
     </div>
 
+    <!-- Retry Modal -->
     <div id="retryModal" class="modal">      
         <div class="modal-content">
-            <img src="./assets/MESSAGE/msg-2.png" alt="Retry Message"> 
-            <img src="./assets/CTA/try-again.gif" onclick="retrySpin()" alt="Try Again">
-            <a href="https://t.me/fafa138cvs_bot?start=138FbadSpinWheel" target="_blank" class="trackable-link">
-                <img src="./assets/CTA/claim-reward.gif" alt="Claim Reward">
-            </a>
+            <img src="Fishing%20Slot/Asset/retry_message.png" alt="Try Again Message">
+            <img src="Fishing%20Slot/CTA/retry_button.gif" onclick="retrySpin()" alt="Retry Button">
         </div>
     </div>
 
+    <!-- JavaScript -->
     <script src="app.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {

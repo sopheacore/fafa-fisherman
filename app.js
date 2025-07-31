@@ -17,9 +17,9 @@ function spinWheel() {
         let targetAngle;
 
         if (spinCount === 0) {
-            targetAngle = 270; // First spin stop angle
+            targetAngle = 320; // First spin stop angle
         } else {
-            targetAngle = 370; // Second spin stop angle
+            targetAngle = 100; // Second spin stop angle
         }
 
         const totalDegrees = (rotations * 360) + targetAngle;
