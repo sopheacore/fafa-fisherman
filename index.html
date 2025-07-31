@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAFA138</title>
+    <link rel="icon" href="./assets/diamond.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <div class="wheel-container">
+        <img src="./assets/title.png" alt="Game Title" class="title-img">
+        <img class="wheel-frame" src="./assets/WHEEL/border.png" alt="frame">
+        <div class="pointer">
+            <img src="./assets/WHEEL/pointer.png" alt="pointer">
+        </div>
+        <div class="wheel" id="wheel">
+            <img src="./assets/WHEEL/spin-wheel.png" alt="wheel">
+        </div>
+        <img src="./assets/spin-bt.png" class="spin-button" onclick="spinWheel()" alt="Spin Button">
+    </div>
+
+    <div class="modal" id="winModal">
+        <div class="modal-content">
+            <img src="./assets/MESSAGE/msg-10.png" alt="Winning Message"> 
+            <a href="https://t.me/fafa138cvs_bot?start=138FbadSpinWheel" target="_blank" class="trackable-link">
+                <img src="./assets/CTA/claim-reward.gif" alt="Claim Reward">
+            </a>
+        </div>
+    </div>
+
+    <div id="retryModal" class="modal">      
+        <div class="modal-content">
+            <img src="./assets/MESSAGE/msg-2.png" alt="Retry Message"> 
+            <img src="./assets/CTA/try-again.gif" onclick="retrySpin()" alt="Try Again">
+            <a href="https://t.me/fafa138cvs_bot?start=138FbadSpinWheel" target="_blank" class="trackable-link">
+                <img src="./assets/CTA/claim-reward.gif" alt="Claim Reward">
+            </a>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('a.trackable-link').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    fbq('track', 'Purchase', {
+                        content_name: link.textContent.trim() || link.getAttribute('href')
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
